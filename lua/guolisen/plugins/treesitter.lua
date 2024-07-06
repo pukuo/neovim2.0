@@ -7,7 +7,7 @@ return {
   main = "nvim-treesitter.configs",
   build = ":TSUpdate",
   opts = {
-    ensure_installed = { "rust", "lua" },
+    ensure_installed = { "rust", "lua", "python" },
     highlight = {
       enable = true,
     },
