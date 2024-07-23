@@ -30,11 +30,13 @@ return {
         "lua_ls",
         "rust_analyzer",
         "pylyzer",
+        "gopls",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
+        "goimports",
       },
     })
   end,

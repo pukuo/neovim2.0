@@ -199,7 +199,7 @@ return {
         })
       end,
       ["rust_analyzer"] = function()
-        -- configure svelte server
+        -- configure rust_analyzer server
         lspconfig["rust_analyzer"].setup({
           capabilities = capabilities,
           settings = {
@@ -212,6 +212,21 @@ return {
               }
             }
           }
+        })
+      end,
+      ["gopls"] = function()
+        -- configure gopls language server
+        lspconfig["gopls"].setup({
+          capabilities = capabilities,
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              staticcheck = true,
+              gofumpt = true,
+            },
+          },
         })
       end,
     })
